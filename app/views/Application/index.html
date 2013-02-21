@@ -1,0 +1,120 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+.center
+{
+margin:auto;
+width: 70%;
+background-color:#b0e0e6;
+}
+</style>
+<title>Karma Form</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+<body id="main_body" >
+	
+	
+	<div id="form_container">
+	
+		<h1><a>Karma Form</a></h1>
+		<form id="form_575321" class="appnitro"  method="post" action="">
+					<div class="form_description">
+			<h2>Karma Form</h2>
+			<p>Please input your information about a event that happened to you and the app will predict the likely hood that a good or bad event will happened to you.</p>
+		</div>						
+			<ul >
+			
+					<li id="li_2" >
+		<label class="description" for="element_2">Is this a Good or Bad event? </label>
+		<span>
+			<input id="element_2_1" name="element_2" class="element radio" type="radio" value="1" />
+<label class="choice" for="element_2_1">Good</label>
+<input id="element_2_2" name="element_2" class="element radio" type="radio" value="2" />
+<label class="choice" for="element_2_2">Bad</label>
+
+		</span> 
+		</li>		<li id="li_1" >
+		<label class="description" for="element_1">Please describe the event. </label>
+		<div>
+			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">What is your email? </label>
+		<div>
+			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">What is the email, you will be sending to ? </label>
+		<div>
+			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">The Date that the event happened. </label>
+		<span>
+			<input id="element_5_1" name="element_5_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_5_1">MM</label>
+		</span>
+		<span>
+			<input id="element_5_2" name="element_5_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_5_2">DD</label>
+		</span>
+		<span>
+	 		<input id="element_5_3" name="element_5_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_5_3">YYYY</label>
+		</span>
+	
+		<span id="calendar_5">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_5_3",
+			baseField    : "element_5",
+			displayArea  : "calendar_5",
+			button		 : "cal_img_5",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">What Time did it happened? </label>
+		<span>
+			<input id="element_6_1" name="element_6_1" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="element_6_2" name="element_6_2" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>MM</label>
+		</span>
+		<span>
+			<input id="element_6_3" name="element_6_3" class="element text " size="2" type="text" maxlength="2" value=""/>
+			<label>SS</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="element_6_4" name="element_6_4">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="575321" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+			</a>
+		</div>
+	</div>
+	</body>
+</html>
